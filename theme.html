@@ -16,7 +16,7 @@
     <link href="{{ assets('css/style.css') }}" rel="stylesheet" />
 
     <!--[if IE 7]>
-      <link href="http://postach.io/static/themes/_assets/fontawesome/css/font-awesome-ie7.min.css" rel="stylesheet">
+      <link  href="http://postach.io/static/themes/_assets/fontawesome/css/font-awesome-ie7.min.css" rel="stylesheet">
     <![endif]-->
 
     <!--
@@ -110,9 +110,7 @@
       <http://maps.google.com/?q=-37.866963,144.980615>
     <![endif]-->
 
-          <div class="post-details">
-            <h2><a href="{{ post.url }}">{{ post.url|truncate(60, False, '...') }}</a></h2>
-          </div>
+
 
 
           <ul class="tags">
@@ -170,6 +168,9 @@
             {% endfor %}
           </ul>
           {% endif %}
+<!--  David2  -->
+         <h2><a href="{{ post.url }}">{{ post.url|truncate(60, False, '...') }}</a></h2>
+         
 
           <div class="post-info">
             <div class="info-left">
