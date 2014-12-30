@@ -143,7 +143,14 @@
 
           <h2>{{ post.title }}</h2>
 
-         
+        {% if post.tags %}
+          <ul class="tags">
+            {% for tag in post.tags %}
+            <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}
@@ -154,13 +161,7 @@
             {% endif %}
           </div>
 
-          {% if post.tags %}
-          <ul class="tags">
-            {% for tag in post.tags %}
-            <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+          
 
          <!--  David2  -->
          {% if post.url %}
